@@ -68,7 +68,14 @@ function App() {
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+    <Container fluid className="d-flex justify-content-center align-items-center vh-100">
+    <div>
+    <h4>Error: {error.message}</h4>
+    <br></br>
+    <h5>Refresh the page</h5>
+    </div>
+    </Container>);
   }
 
   const handleProfileClick = (profile, target) => {
